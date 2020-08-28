@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   	@user = User.create(signup_params)
   	if @user.save
   	  flash[:notice] = 'Account is sucessfully created'
-  	  redirect_to_user_path
+  	  redirect_to user_path(@user)
   	else
   	  flash[:alert] = 'Oops!! Something went wrong...'
   	  render 'new'
