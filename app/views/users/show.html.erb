@@ -2,3 +2,22 @@
 	<h2>Signed in as:</h2> 
 	<%= @user.name %>
 </div>
+
+<div>
+<%= link_to 'logout', user_path, method: :delete, class: 'btn btn-outline-danger' %>
+</div>
+
+<div class="text-center">
+<% @user.events.each do |event| %>
+    <div class="card my-3">
+        <div class="card-header">
+            <strong><%= event.name %></strong> 
+        </div>
+        <div class="card-body">
+            <p class="card-text"><%= event.description %></p>
+            <p class="card-text"><%= event.location %></p>
+            <p class="card-text"><%= event.date %></p>
+        </div>
+    </div>
+<% end %>
+</div>
