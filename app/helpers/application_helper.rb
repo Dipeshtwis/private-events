@@ -1,7 +1,7 @@
 module ApplicationHelper
   def check_member
     res = ''
-    if logger?
+    if logged_in?
       res << link_to('Profile', user_path(session[:user_id]), class: 'btn btn-outline-success mr-3')
       res << (link_to 'Log out', logout_path, method: :delete,
                                                               class: 'mr-2 btn btn-outline-danger')
