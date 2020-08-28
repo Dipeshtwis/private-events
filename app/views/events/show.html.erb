@@ -1,3 +1,6 @@
-<div>
-	Creator of this event <%= @event.user %>
-</div>
+<h1>Creator of this Event</h1>
+
+<h4 class="text-centet">
+    <%= @event.creator.name  %> 
+</h4>
+<%= link_to 'Back', :back %>
