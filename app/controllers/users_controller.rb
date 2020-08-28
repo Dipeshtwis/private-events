@@ -7,6 +7,8 @@ class UsersController < ApplicationController
   	@user = User.create(signup_params)
   	if @user.save
   	  flash[:notice] = 'Account is sucessfully created'
+  	  session[:user_id] = @user.id
+      session[:username] = @user.name
   	  redirect_to user_path(@user)
   	else
   	  flash[:alert] = 'Oops!! Something went wrong...'
@@ -15,6 +17,7 @@ class UsersController < ApplicationController
   end
 
   def show
+  	@user = User.find(params[:id])
   end
 
   private
