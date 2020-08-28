@@ -8,4 +8,11 @@ class ApplicationController < ActionController::Base
   def logged_in?
     !current_user.nil?
   end
+
+  def require_user
+    return if logged_in?
+
+    flash[:danger] = 'Logged in to perform this action'
+    redirect_to root_path
+  end
 end
