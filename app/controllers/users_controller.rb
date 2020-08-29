@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       session[:username] = @user.name
       redirect_to user_path(@user)
     else
-      flash[:danger] = 'Oops!! Something went wrong...'
+      flash[:danger] = 'You are an existing user...  Please sign in'
       render 'new'
     end
   end
