@@ -3,17 +3,7 @@
 	<%= @user.name %>
 </div>
 
-<div class="text-center">
-<% @user.events.each do |event| %>
-    <div class="card my-3">
-        <div class="card-header">
-            <strong><%= event.name %></strong> 
-        </div>
-        <div class="card-body">
-            <p class="card-text"><%= event.description %></p>
-            <p class="card-text"><%= event.location %></p>
-            <p class="card-text"><%= event.date %></p>
-        </div>
-    </div>
-<% end %>
-</div>
+<%= created_events(@user, 'users/user_events', @user.events, 'List of created events')  %>
+<%= attended_events(@user, 'users/user_events', @up_events,'List of upcoming events')  %>
+<%= attended_events(@user, 'users/user_events', @prev_events,'List of Previously attended events')  %>
+

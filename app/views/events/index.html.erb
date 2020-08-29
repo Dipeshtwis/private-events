@@ -1,17 +1,12 @@
-<div class="col-md-2"></div>
-
-<div class="col-md-4">
-    <h4>Past Event</h4>
-    <% @past.each do |past_event| %>
-        <p><%= past_event.description %></p>
-        <small><em>by <%= past_event.creator.name %></em></small>
-    <% end %>
-</div>
-<div class="col-md-4">
-    <h4>Upcoming Event</h4>
-    <% @upcoming.each do |upcoming_event| %>
-        <p><%= upcoming_event.description %></p>
-        <small><em>by <%= upcoming_event.creator.name %></em></small>
-    <% end %>
-</div>
 <div class="col-md-2"></div> 
+  <div class="container">
+    <h4 class="pb-3 mt-4">Upcoming Event</h4>
+    <%= render 'event', obj: @upcoming %>
+
+    <h4 class="pb-3 mt-4">Past Event</h4>
+    <%= render 'event', obj: @past %>        
+  </div>
+</div>
+
+
+
