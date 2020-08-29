@@ -16,7 +16,7 @@ class EventsController < ApplicationController
       flash[:notice] = 'Event has been created'
       redirect_to events_path
     else
-      flash[:alert] = 'Something wrong'
+      flash[:danger] = 'Something wrong'
       render 'new'
     end
   end
