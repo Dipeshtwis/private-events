@@ -3,10 +3,6 @@
 	<%= @user.name %>
 </div>
 
-<div>
-<%= link_to 'logout', user_path, method: :delete, class: 'btn btn-outline-danger' %>
-</div>
-
 <div class="text-center">
 <% @user.events.each do |event| %>
     <div class="card my-3">
