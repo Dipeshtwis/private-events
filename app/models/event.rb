@@ -4,4 +4,7 @@ class Event < ApplicationRecord
   has_many :attendees, through: :invitations, source: :attendee
 
   validates :name, :description, :location, :date, presence: true
+
+  scope :past, -> { where(['date < ?', Date.today]) }
+  scope :upcoming, -> { where(['date > ?', Date.today]) }
 end

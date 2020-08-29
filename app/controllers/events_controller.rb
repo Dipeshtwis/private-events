@@ -1,6 +1,9 @@
 class EventsController < ApplicationController
   before_action :require_user, except: [:index]
-  def index; end
+  def index
+  	@past = Event.past
+    @upcoming = Event.upcoming
+  end
 
   def new
     @event = current_user.events.build

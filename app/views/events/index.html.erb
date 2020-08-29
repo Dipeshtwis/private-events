@@ -1,8 +1,17 @@
-<h1>Events</h1>
-<% @events.each do |event| %>
-<h4 class="text-center">
-    <%= link_to event.description, event_path(event) %> 
+<div class="col-md-2"></div>
 
-    <small><em>by <%= event.creator.name %></em></small>
-</h4>
-<% end %> 
+<div class="col-md-4">
+    <h4>Past Event</h4>
+    <% @past.each do |past_event| %>
+        <p><%= past_event.description %></p>
+        <small><em>by <%= past_event.creator.name %></em></small>
+    <% end %>
+</div>
+<div class="col-md-4">
+    <h4>Upcoming Event</h4>
+    <% @upcoming.each do |upcoming_event| %>
+        <p><%= upcoming_event.description %></p>
+        <small><em>by <%= upcoming_event.creator.name %></em></small>
+    <% end %>
+</div>
+<div class="col-md-2"></div> 
