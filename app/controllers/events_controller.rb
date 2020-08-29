@@ -23,9 +23,7 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
-    @event.attendees.each do |e|
-      @users = User.where.not(name: e.name).where.not(name: @event.creator.name)
-    end
+    @users = User.all
   end
 
   private
