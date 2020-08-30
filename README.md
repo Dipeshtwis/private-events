@@ -15,7 +15,7 @@ In this project, I built a site similar to a private Eventbrite which allows use
 
 <p align="center">
 <a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-<a href="#ll">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#sc">Screenshot</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#gs">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 </p>
@@ -25,9 +25,9 @@ In this project, I built a site similar to a private Eventbrite which allows use
 - Ruby on Rails (Version: 6.0.3.2)
 - Ruby (Version: 2.7.1)
 
-## Live Demo Link <a name = "ll"></a>
+## Screenshot <a name = "sc"></a>
 
-[Live Demo]()
+![screenshot](./app/assets/images/PrivateEvents.png)
 
 
 ## Getting Started <a name = "gs"></a>
@@ -44,6 +44,20 @@ $ cd private-events
 $ bundle install
 $ yarn install --check-files
 $ rails db:migrate
+~~~
+
+~~~
+In case your test migrate does not happen, run this command
+
+$  rails db:migrate RAILS_ENV=test
+
+## To run Test
+
+~~~ruby
+$ ruby -Itest test/integration/create_users_controller_test.rb
+$ ruby -Itest test/models/event_test.rb
+$ ruby -Itest test/models/user_test.rb
+
 ~~~
 
 

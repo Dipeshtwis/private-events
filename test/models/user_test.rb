@@ -9,12 +9,12 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?
   end
 
-  test 'user name should be present' do
+  test 'username should be present' do
     @user.name = ' '
     assert_not @user.valid?
   end
 
-  test 'user name should be unique' do
+  test 'name should be unique' do
     @user.save
     @user2 = User.new(name: 'Deepesh')
     assert_not @user2.valid?
