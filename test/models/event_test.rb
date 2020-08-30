@@ -6,17 +6,17 @@ class EventTest < ActiveSupport::TestCase
   end
 
   test 'event name should be present' do
-    @event.name = " "
+    @event.name = ' '
     assert_not @event.valid?
   end
 
   test 'event description should be present' do
-    @event.description = " "
+    @event.description = ' '
     assert_not @event.valid?
   end
 
   test 'event location should be present' do
-    @event.location = " "
+    @event.location = ' '
     assert_not @event.valid?
   end
   # test "the truth" do
