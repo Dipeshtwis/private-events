@@ -10,8 +10,8 @@ module EventsHelper
   end
 
   def event_attendee(event)
-    event.attendees.each do |event|
-      concat(content_tag(:hr) + content_tag(:p, event.name))
+    event.attendees.each do |e|
+      concat(content_tag(:hr) + content_tag(:p, e.name))
     end
   end
 end
