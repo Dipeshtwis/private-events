@@ -46,14 +46,10 @@ $ yarn install --check-files
 $ rails db:migrate
 ~~~
 
-~~~
-In case your test migrate does not happen, run this command
-
-$  rails db:migrate RAILS_ENV=test
-
 ## To run Test
 
 ~~~ruby
+$  rails db:migrate RAILS_ENV=test
 $ ruby -Itest test/integration/create_users_controller_test.rb
 $ ruby -Itest test/models/event_test.rb
 $ ruby -Itest test/models/user_test.rb
