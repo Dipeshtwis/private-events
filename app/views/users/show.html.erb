@@ -3,7 +3,7 @@
 	<%= @user.name %>
 </div>
 
-<%= created_events(@user, 'users/user_events', @user.events, 'List of created events')  %>
+<%= created_events(@user, 'users/user_events', @user_events, 'List of created events')  %>
 <%= attended_events(@user, 'users/user_events', @up_events,'List of upcoming events')  %>
 <%= attended_events(@user, 'users/user_events', @prev_events,'List of Previously attended events')  %>
 
