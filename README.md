@@ -16,6 +16,7 @@ In this project, I built a site similar to a private Eventbrite which allows use
 <p align="center">
 <a href="#with">Built with</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#sc">Screenshot</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<a href="#ll">Live Demo Link</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#gs">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 <a href="#author">Author</a>
 </p>
@@ -28,6 +29,11 @@ In this project, I built a site similar to a private Eventbrite which allows use
 ## Screenshot <a name = "sc"></a>
 
 ![screenshot](./app/assets/images/PrivateEvents.png)
+
+
+## Live Demo Link <a name = "ll"></a>
+
+[Live Demo](https://eventbrite-lite.herokuapp.com/)
 
 
 ## Getting Started <a name = "gs"></a>
