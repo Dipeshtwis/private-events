@@ -2,7 +2,8 @@ require 'test_helper'
 
 class EventTest < ActiveSupport::TestCase
   def setup
-    @event = Event.new(name: 'FirstEvent', description: 'Description of the first event', location: 'chess.com', date: '2020-08-30, 20:00 ', creator_id: 1)
+    @event = Event.new(name: 'FirstEvent', description: 'Description of the first event',
+                       location: 'chess.com', date: '2020-08-30, 20:00 ', creator_id: 1)
   end
 
   test 'event name should be present' do
